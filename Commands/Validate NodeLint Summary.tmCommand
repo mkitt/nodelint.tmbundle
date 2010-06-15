@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>saveActiveFile</string>
+	<key>command</key>
+	<string># run nodelint on the current file and output as a tool tip summary
+
+node "/Users/mkitt/Desktop/workspace/nodelint.js/nodelint.js" "$TM_FILEPATH" --config "$TM_BUNDLE_SUPPORT/conf/config.js" --reporter "$TM_BUNDLE_SUPPORT/conf/summary_reporter.js"</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>@s</string>
+	<key>name</key>
+	<string>Validate NodeLint Summary</string>
+	<key>output</key>
+	<string>showAsTooltip</string>
+	<key>scope</key>
+	<string>source.js</string>
+	<key>uuid</key>
+	<string>384FD446-F032-41E6-9746-4B87A486C336</string>
+</dict>
+</plist>

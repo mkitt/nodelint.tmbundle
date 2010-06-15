@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string># run nodelint on the current file and output as an HTML Report
+
+. "$TM_SUPPORT_PATH/lib/webpreview.sh"
+html_header "JSLint Results"
+node "/Users/mkitt/Desktop/workspace/nodelint.js/nodelint.js" "$TM_FILEPATH" --config "$TM_BUNDLE_SUPPORT/conf/config.js" --reporter "$TM_BUNDLE_SUPPORT/conf/full_reporter.js"</string>
+	<key>fallbackInput</key>
+	<string>scope</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>^V</string>
+	<key>name</key>
+	<string>Validate NodeLint Full Report</string>
+	<key>output</key>
+	<string>showAsHTML</string>
+	<key>scope</key>
+	<string>source.js</string>
+	<key>uuid</key>
+	<string>1490B74A-8B2B-43E4-ADD1-5EC79BA5A5B3</string>
+</dict>
+</plist>
