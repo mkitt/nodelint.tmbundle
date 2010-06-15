@@ -9,7 +9,7 @@
 
 . "$TM_SUPPORT_PATH/lib/webpreview.sh"
 html_header "JSLint Results"
-node "/Users/mkitt/Desktop/workspace/nodelint.js/nodelint.js" "$TM_FILEPATH" --config "$TM_BUNDLE_SUPPORT/conf/config.js" --reporter "$TM_BUNDLE_SUPPORT/conf/full_reporter.js"</string>
+node "$TM_BUNDLE_SUPPORT/bin/nodelint.js/nodelint.js" "$TM_FILEPATH" --config "$TM_BUNDLE_SUPPORT/conf/config.js" --reporter "$TM_BUNDLE_SUPPORT/conf/full_reporter.js"</string>
 	<key>fallbackInput</key>
 	<string>scope</string>
 	<key>input</key>

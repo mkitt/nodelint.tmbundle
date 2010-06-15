@@ -1,0 +1,3 @@
+[submodule "Support/bin/nodelint.js"]
+	path = Support/bin/nodelint.js
+	url = git@github.com:tav/nodelint.js.git
