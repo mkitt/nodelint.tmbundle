@@ -43,6 +43,4 @@ function reporter(results) {
   if (len > 0) {
     sys.puts(output);
   }
-  // for some weird reason this had to be added for node 0.1.93
-  sys.puts('');
 }
