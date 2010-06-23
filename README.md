@@ -1,3 +1,5 @@
+## NodeLint TextMate Bundle ##
+
 [nodelint.js][nodelint] uses [node.js][node] and [JSLint][jslint] to report errors within your JavaScript files. This bundle hooks into TextMate's save or validate key binding to run [nodelint.js][nodelint]. It will work on any file or selected text associated with TextMate's `source.js` scope selector.
 
 
