@@ -2,8 +2,29 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>mainMenu</key>
+	<dict>
+		<key>items</key>
+		<array>
+			<string>384FD446-F032-41E6-9746-4B87A486C336</string>
+			<string>1490B74A-8B2B-43E4-ADD1-5EC79BA5A5B3</string>
+			<string>E20C95D4-6996-48C7-BAB2-2FF202F6956F</string>
+			<string>23A4F80A-1111-4BDC-A8E9-DDFDC83841C4</string>
+		</array>
+		<key>submenus</key>
+		<dict/>
+	</dict>
 	<key>name</key>
 	<string>JavaScript NodeLint</string>
+	<key>ordering</key>
+	<array>
+		<string>F08FA029-373C-421D-AB7E-57683D859357</string>
+		<string>37176191-5784-4303-A651-BDFAC3F29901</string>
+		<string>E20C95D4-6996-48C7-BAB2-2FF202F6956F</string>
+		<string>23A4F80A-1111-4BDC-A8E9-DDFDC83841C4</string>
+		<string>1490B74A-8B2B-43E4-ADD1-5EC79BA5A5B3</string>
+		<string>384FD446-F032-41E6-9746-4B87A486C336</string>
+	</array>
 	<key>uuid</key>
 	<string>FE440288-7A18-418C-B5B8-16203A025486</string>
 </dict>

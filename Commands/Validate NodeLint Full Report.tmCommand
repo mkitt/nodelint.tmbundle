@@ -5,11 +5,24 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string># run nodelint on the current file and output as an HTML Report
+	<string># test if there are project specific config and reporters to override
+NODELINT_CONFIG="$TM_BUNDLE_SUPPORT/conf/config.js"
+NODELINT_REPORTER="$TM_BUNDLE_SUPPORT/conf/full_reporter.js"
+
+if [[ -e "$TM_DIRECTORY/nodelint-config.js" ]]
+   then NODELINT_CONFIG="$TM_DIRECTORY/nodelint-config.js"
+fi
+
+if [[ -e "$TM_DIRECTORY/nodelint-freporter.js" ]]
+   then NODELINT_REPORTER="$TM_DIRECTORY/nodelint-freporter.js"
+fi
+
+# run nodelint on the current file and output as an HTML Report
 
 . "$TM_SUPPORT_PATH/lib/webpreview.sh"
 html_header "JSLint Results"
-node "$TM_BUNDLE_SUPPORT/bin/nodelint.js/nodelint.js" "$TM_FILEPATH" --config "$TM_BUNDLE_SUPPORT/conf/config.js" --reporter "$TM_BUNDLE_SUPPORT/conf/full_reporter.js"</string>
+node "$TM_BUNDLE_SUPPORT/bin/nodelint.js/nodelint.js" "$TM_FILEPATH" --config "$NODELINT_CONFIG" --reporter "$NODELINT_REPORTER"
+</string>
 	<key>fallbackInput</key>
 	<string>scope</string>
 	<key>input</key>

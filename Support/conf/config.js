@@ -42,7 +42,7 @@ var options = {
   // white      : true,  // if strict whitespace rules apply
   // widget     : false, // if the Yahoo Widgets globals should be predefined
 
-  indent  : 2,     // set the expected indentation level
+  indent     : 2,     // set the expected indentation level
 
   // the names of predefined global variables:
   // the following are defined by frameworks such as nodejs, jasmine, jQuery
@@ -60,5 +60,6 @@ var options = {
                 'asyncSpecDone',
                 'asyncSpecWait',
                 'window',
-                'jQuery']
+                'jQuery',
+                '$']
 };

@@ -5,9 +5,21 @@
 	<key>beforeRunningCommand</key>
 	<string>saveActiveFile</string>
 	<key>command</key>
-	<string># run nodelint on the current file and output as a tool tip summary
+	<string># test if there are project specific config and reporters to override
+NODELINT_CONFIG="$TM_BUNDLE_SUPPORT/conf/config.js"
+NODELINT_REPORTER="$TM_BUNDLE_SUPPORT/conf/summary_reporter.js"
 
-node "$TM_BUNDLE_SUPPORT/bin/nodelint.js/nodelint.js" "$TM_FILEPATH" --config "$TM_BUNDLE_SUPPORT/conf/config.js" --reporter "$TM_BUNDLE_SUPPORT/conf/summary_reporter.js"</string>
+if [[ -e "$TM_DIRECTORY/nodelint-config.js" ]]
+   then NODELINT_CONFIG="$TM_DIRECTORY/nodelint-config.js"
+fi
+
+if [[ -e "$TM_DIRECTORY/nodelint-sreporter.js" ]]
+   then NODELINT_REPORTER="$TM_DIRECTORY/nodelint-sreporter.js"
+fi
+
+# run nodelint on the current file and output as a tool tip summary
+node "$TM_BUNDLE_SUPPORT/bin/nodelint.js/nodelint.js" "$TM_FILEPATH" --config "$NODELINT_CONFIG" --reporter "$NODELINT_REPORTER"
+</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
