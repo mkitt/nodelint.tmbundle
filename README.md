@@ -40,6 +40,10 @@ You'll first need to make sure you have the latest version of [node.js][node] in
 *You'll need to manually update your bundle to stay current down the road if you go this route.*
 
 
+
+*Please note, I haven't tested installing this on another machine yet, you may need to init and update the submodule for nodelint.js within the bundle before this works. Check out working with [git submodules][submodules] for more information.*
+
+
 ## TextMate Global Settings ##
 
 Once you have the bundle installed, under the `Support/bin/` folder there is a submodule pointing to the latest release of the [nodelint.js][nodelint] repository (*assumes you've either installed from GitHub or GetBundles and not just downloaded the source*). I'd suggest leaving this alone and let the submodule live it's life, there are plenty other places you can affect configurations. If you feel the need to adjust how [nodelint.js][nodelint] works, please fork that repository and ask [Tav][tav] or [myself][mkitt] for a pull request there.
@@ -110,3 +114,5 @@ To contribute any patches, fork this repository using GitHub and send a [pull re
 [crockford]: http://www.crockford.com
 [subtlegradient]: http://github.com/subtleGradient/
 [jstools]: http://github.com/subtleGradient/javascript-tools.tmbundle
+[submodules]: http://github.com/guides/developing-with-submodules
+
