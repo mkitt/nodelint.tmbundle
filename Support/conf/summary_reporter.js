@@ -43,4 +43,6 @@ function reporter(results) {
   if (len > 0) {
     sys.puts(output);
   }
+  
+  sys.puts('');
 }

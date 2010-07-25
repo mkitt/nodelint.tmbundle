@@ -59,5 +59,5 @@ function reporter(results) {
           '</html>';
 
   sys.puts(html);
-
+  sys.puts('');
 }
