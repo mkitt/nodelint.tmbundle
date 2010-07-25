@@ -61,5 +61,9 @@ var options = {
                 'asyncSpecWait',
                 'window',
                 'jQuery',
-                '$']
+                '$',
+                '$$',
+                'Event',
+                'Class',
+                'Element']
 };
