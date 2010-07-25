@@ -18,7 +18,7 @@ if [[ -e "$TM_DIRECTORY/nodelint-sreporter.js" ]]
 fi
 
 # run nodelint on the current file and output as a tool tip summary
-node "$TM_BUNDLE_SUPPORT/bin/nodelint.js/nodelint.js" "$TM_FILEPATH" --config "$NODELINT_CONFIG" --reporter "$NODELINT_REPORTER"
+node "$TM_BUNDLE_SUPPORT/bin/nodelint.js" "$TM_FILEPATH" --config "$NODELINT_CONFIG" --reporter "$NODELINT_REPORTER"
 </string>
 	<key>input</key>
 	<string>none</string>
