@@ -15,17 +15,10 @@ This bundle draws most of it's inspiration from [SubtleGradient's excellent Java
 
 You'll first need to make sure you have the latest version of [node.js][node] installed and it's in a `$PATH` where TextMate can access it. There are a few different options for installing this bundle:
 
-**Install via GetBundles:**
-
-1. Make sure you have the latest [GetBundles][GetBundles] [installed][GBInstall]
-2. In TextMate's Finder bar select `Bundles => GetBundles => Get Bundles`
-3. In GetBundle's search bar type "JavaScript NodeLint"
-4. Select and click "Install Bundles"
-
 **Install via Git:**
 
     cd ~/Library/Application\ Support/TextMate/Bundles/
-    git clone http://github.com/mkitt/javascript-nodelint.tmbundle.git "JavaScript-NodeLint.tmbundle"
+    git clone http://github.com/mkitt/javascript-nodelint.tmbundle.git "JavaScript NodeLint.tmbundle"
     osascript -e 'tell app "TextMate" to reload bundles'
 
 **Via download from GitHub:**
@@ -100,8 +93,6 @@ To contribute any patches, fork this repository using GitHub and send a [pull re
 
 [node]: http://nodejs.org/
 [nodelint]: http://github.com/tav/nodelint.js
-[GetBundles]: http://svn.textmate.org/trunk/Review/Bundles/GetBundles.tmbundle/
-[GBInstall]: http://solutions.treypiepmeier.com/2009/02/25/installing-getbundles-on-a-fresh-copy-of-textmate/
 [jslint]: http://www.jslint.com/
 [jslintopts]: http://www.jslint.com/lint.html#options
 [mkitt]: http://github.com/mkitt
