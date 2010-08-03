@@ -8,7 +8,7 @@ This bundle draws most of it's inspiration from [SubtleGradient's excellent Java
 
 ## Version Support ##
 
-[node.js][node]: version 0.1.101
+[node.js][node]: version 0.1.102
 
 
 ## Installation ##
