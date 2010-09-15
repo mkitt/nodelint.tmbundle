@@ -1,5 +1,5 @@
 /*
- * This is the default options file for nodelint.js
+ * This is the default options file for nodelint
  *
  * Changes released into the Public Domain by tav <tav@espians.com>
  * Options support added by Corey Hart <corey@codenothing.com>
@@ -9,7 +9,6 @@
 // set your options here
 
 var options = {
-
     adsafe     : false, // if ADsafe should be enforced
     bitwise    : true,  // if bitwise operators should not be allowed
     browser    : false, // if the standard browser globals should be predefined
@@ -18,6 +17,7 @@ var options = {
     debug      : false, // if debugger statements should be allowed
     devel      : false, // if logging should be allowed (console, alert, etc.)
     eqeqeq     : true,  // if === should be required
+    es5        : true,  // if ES5 syntax should be allowed
     evil       : false, // if eval should be allowed
     forin      : false, // if for in statements must filter
     fragment   : false, // if HTML fragments should be allowed
@@ -33,13 +33,12 @@ var options = {
     rhino      : false, // if the Rhino environment globals should be predefined
     undef      : true,  // if variables should be declared before used
     safe       : false, // if use of some browser features should be restricted
-    sidebar    : false, // if the System object should be predefined
+    windows    : false, // if MS Windows-specigic globals should be predefined
     strict     : false, // require the "use strict"; pragma
     sub        : false, // if all forms of subscript notation are tolerated
     white      : true,  // if strict whitespace rules apply
     widget     : false, // if the Yahoo Widgets globals should be predefined
-
-    // indent  : 2,     // set the expected indentation level
+    indent     : 2,     // set the expected indentation level
 
     // the names of predefined global variables:
     // the following are defined by nodejs itself
@@ -48,4 +47,4 @@ var options = {
     // customise the error reporting -- the following colours the text red
     error_prefix: "\u001b[1m",
     error_suffix: ":\u001b[0m "
-};
+  };
