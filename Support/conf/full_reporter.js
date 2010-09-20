@@ -32,31 +32,15 @@ function reporter(results) {
                 '</a>' +
                 '<pre><code>' + 
                   (error.evidence || '').replace(error_regexp, "$1") +
-                '</pre></code>' +
+                '</code></pre>' +
               '</li>';
   }
   
-  html += '<html>' +
-            '<head>' +
-              '<style type="text/css">' +
-                'body {font-size: 14px;}' +
-                'pre { background-color: #eee; color: #400; margin: 3px 0;}' +
-                'h1, h2 { font-family:"Arial, Helvetica"; margin: 0 0 5px; }' +
-                'h1 { font-size: 20px; }' +
-                'h2 { font-size: 16px;}' +
-                'a { font-family:"Arial, Helvetica";}' +
-                'ul { margin: 10px 0 0 20px; padding: 0; list-style: none;}' +
-                'li { margin: 0 0 10px; }' +
-              '</style>' +
-            '</head>' +
-            '<body>' +
-              '<h1>' + len + ' Error' + ((len === 1) ? '' : 's') + '</h1>' +
-              '<hr/>' +
-              '<ul>' +
-                output +
-              '</ul>' +
-            '</body>' +
-          '</html>';
+  html += '<h1>' + len + ' Error' + ((len === 1) ? '' : 's') + '</h1>' +
+          '<hr/>' +
+          '<ol>' +
+            output +
+          '</ol>';
 
   sys.puts(html);
   sys.puts('');
