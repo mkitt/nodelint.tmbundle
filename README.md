@@ -73,11 +73,6 @@ I'd say, I'm not "totally stoked" on where these overridden files end up, so I'm
 There are also two templates included when generating a file from `New From Template` equivalent to `Stub Configuration File` and `Stub Reporter File`.
 
 
-## Maintenance and Update Frequency ##
-
-Since I personally use this bundle on a daily basis, support in the foreseeable future will happen as frequently as [node.js][node] or [nodelint][nodelint] is updated (which seems to be about weekly). I do have access to the master repository at [nodelint][nodelint] and I tend to make updates to both that repository and this one on Sunday evenings or Monday mornings (MST). If something appears to be broken with latest version of [node.js][node], poke me on [github][mkitt] and I'll try my best to make an update as quick as possible.
-
-
 ## Contribute ##
 
 To contribute any patches, fork this repository using GitHub and send a [pull request my way][mkitt].
