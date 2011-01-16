@@ -1,4 +1,4 @@
-## NodeLint TextMate Bundle ##
+# NodeLint TextMate Bundle
 
 [nodelint][nodelint] uses [node.js][node] and [JSLint][jslint] to report errors within your JavaScript files. This bundle hooks into TextMate's save or validate key binding to run [nodelint][nodelint]. It will work on any file or selected text associated with TextMate's `source.js` scope selector.
 
@@ -6,19 +6,19 @@
 This bundle draws most of it's inspiration from [SubtleGradient's excellent JavaScript Tools bundle][jstools].
 
 
-## Version Support ##
+## Version Support
 
 [node.js][node]: version 0.1.103 >
 
 
-## Installation ##
+## Installation
 
 You'll first need to make sure you have the latest version of [node.js][node] installed and it's in a `$PATH` where TextMate can access it. There are a few different options for installing this bundle:
 
 **Install via Git:**
 
     cd ~/Library/Application\ Support/TextMate/Bundles/
-    git clone http://github.com/mkitt/javascript-nodelint.tmbundle.git "JavaScript NodeLint.tmbundle"
+    git clone https://github.com/mkitt/nodelint.tmbundle.git "JavaScript NodeLint.tmbundle"
     osascript -e 'tell app "TextMate" to reload bundles'
 
 **Via download from GitHub:**
@@ -33,9 +33,9 @@ You'll first need to make sure you have the latest version of [node.js][node] in
 *You'll need to manually update your bundle to stay current down the road if you go this route.*
 
 
-## TextMate Global Settings ##
+## TextMate Global Settings
 
-Once you have the bundle installed, under the `Support/bin/` folder lives the barebones latest of [nodelint][nodelint]. I'd suggest leaving this alone and let [nodelint][nodelint] live it's life, there are plenty other places you can affect configurations. If you feel the need to adjust how [nodelint][nodelint] works, please fork that repository and ask [Tav][tav] or [myself][mkitt] for a pull request there.
+Once you have the bundle installed, under the `Support/bin/` folder lives the submodule to [nodelint][nodelint]. I'd suggest leaving this alone and let [nodelint][nodelint] live it's life, there are plenty other places you can affect configurations. If you feel the need to adjust how [nodelint][nodelint] works, please fork that repository and ask [Tav][tav] for a pull request there.
 
 Within `Support/conf/` there are 3 files which you can alter. These files are generally what the bundle will read when running [nodelint][nodelint] validations:
 
@@ -45,8 +45,14 @@ Within `Support/conf/` there are 3 files which you can alter. These files are ge
 
 You'll want to tune these to your liking as they are what the bundle defaults to as your system wide settings within TextMate.
 
+You can also override the path to the config file by creating the `TM_NODELINT_CONFIG` shell variable under `Preferences -> Advanced -> Shell Variables`. So mine looks like:
 
-## Project Specific Settings ##
+        TM_NODELINT_CONFIG /Users/username/Library/Application Support/TextMate/Support/nodelint-config/config.js
+
+This will take precedence over the 2 default config files (nodelint's and the one in `Support/conf`)
+
+
+## Project Specific Settings
 
 It's also possible to have "project" or "directory" specific settings for reporters and the configuration of [JSLint options][jslintopts]. 
 
@@ -54,7 +60,7 @@ Say you're collaborating or contracting on a project and the best practice is to
 
 At the **base working directory** of the project you can create files to override your global TextMate settings without changing anything else. Files are one to one with the 3 files contained within `Support/conf/`. Create any of these files you're looking to override.
 
-- `./nodelint-config.js`: overrides `Support/conf/config.js`
+- `./nodelint-config.js`: overrides `Support/conf/config.js` or `TM_NODELINT_CONFIG`
 - `./nodelint-sreporter.js`: overrides `Support/conf/summary_reporter.js` which is triggered on save (`⌘S`).
 - `./nodelint-freporter.js`: overrides `Support/conf/full_reporter.js` which is triggered on validate (`⌃⇧V`).
 
@@ -63,7 +69,7 @@ Most likely, you'll only need to override the [JSLint options][jslintopts] on a 
 I'd say, I'm not "totally stoked" on where these overridden files end up, so I'm open to any suggestions.
 
 
-## Usage ##
+## Usage
 
 - **Validate Nodelint Summary** (`⌘S`): Runs [nodelint][nodelint] on the current file or selected text, the number of failures (and descriptions if less than 2), if there are no errors the tooltip is not displayed. Uses `Support/conf/summary_reporter.js` unless a project specific `./nodelint-sreporter.js` is present.
 - **Validate Nodelint Full Report** (`⌃⇧V`): Runs [nodelint][nodelint] and prints results to a new window. Results are hyperlinked back to the document's errors. Uses `Support/conf/full_reporter.js` unless a project specific `./nodelint-freporter.js` is present.
@@ -73,7 +79,7 @@ I'd say, I'm not "totally stoked" on where these overridden files end up, so I'm
 There are also two templates included when generating a file from `New From Template` equivalent to `Stub Configuration File` and `Stub Reporter File`.
 
 
-## Contribute ##
+## Contribute
 
 To contribute any patches, fork this repository using GitHub and send a [pull request my way][mkitt].
 

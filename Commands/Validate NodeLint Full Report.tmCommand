@@ -9,6 +9,10 @@
 NODELINT_CONFIG="$TM_BUNDLE_SUPPORT/conf/config.js"
 NODELINT_REPORTER="$TM_BUNDLE_SUPPORT/conf/full_reporter.js"
 
+if [[ -e $TM_NODELINT_CONFIG ]]
+   then NODELINT_CONFIG=$TM_NODELINT_CONFIG
+fi
+
 if [[ -e "$TM_DIRECTORY/nodelint-config.js" ]]
    then NODELINT_CONFIG="$TM_DIRECTORY/nodelint-config.js"
 fi
