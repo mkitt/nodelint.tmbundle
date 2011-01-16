@@ -21,7 +21,7 @@ fi
 
 . "$TM_SUPPORT_PATH/lib/webpreview.sh"
 html_header "JSLint Results"
-node "$TM_BUNDLE_SUPPORT/bin/nodelint" "$TM_FILEPATH" --config "$NODELINT_CONFIG" --reporter "$NODELINT_REPORTER"
+node "$TM_BUNDLE_SUPPORT/bin/nodelint/nodelint" "$TM_FILEPATH" --config "$NODELINT_CONFIG" --reporter "$NODELINT_REPORTER"
 </string>
 	<key>fallbackInput</key>
 	<string>scope</string>
