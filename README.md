@@ -19,6 +19,7 @@ You'll first need to make sure you have the latest version of [node.js][node] in
 
     cd ~/Library/Application\ Support/TextMate/Bundles/
     git clone https://github.com/mkitt/nodelint.tmbundle.git "JavaScript NodeLint.tmbundle"
+    git submodule update --init
     osascript -e 'tell app "TextMate" to reload bundles'
 
 **Via download from GitHub:**
